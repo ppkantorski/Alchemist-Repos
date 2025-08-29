@@ -1,2 +1,2 @@
-# Mod Alchemist Repos
-Formatted repositories for usage with the `Mod Alchemist` Ultrahand package.
+# Alchemist Repos
+Formatted repositories for usage with the `Alchemist` Ultrahand package.
