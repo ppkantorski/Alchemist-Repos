@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """
-Headless extractor using unar/7z (no Keka). Designed for the NX-IPS-romfs-compilation repo.
-Installs required: `brew install unar p7zip`
+Headless extractor using unar / 7z.
+Designed for the NX-IPS-romfs-compilation repo.
+Requirements: `brew install unar p7zip`
 Set KEEP_TMP=1 to preserve temp extraction folders for debugging.
 """
 import os, re, sys, shutil, tempfile, subprocess, unicodedata, urllib.request, zipfile
 
 # ---------------- Config ----------------
-TMP_ROOT = os.path.expanduser("~/keka_extract_tmp")   # safe, in HOME
+# Extract inside the same directory as this script
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+TMP_ROOT = os.path.join(SCRIPT_DIR, "extract_tmp")
 KEEP_TMP = os.environ.get("KEEP_TMP", "") != ""
 # ---------------- Helpers (naming/title) ----------------
 def sanitize_name(name):
