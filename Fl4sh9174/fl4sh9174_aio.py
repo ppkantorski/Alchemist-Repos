@@ -211,7 +211,7 @@ def main():
         print("Unzip complete.")
 
     root = unzip_dir
-    output_pchtxt = os.path.join(".", "pchtxts/fl4sh9174")
+    output_pchtxt = os.path.join(".", "pchtxts/Fl4sh9174")
     
     # Process the pchtxt repository
     process_pchtxt_repo(root, output_pchtxt)
