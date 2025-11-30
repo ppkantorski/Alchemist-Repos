@@ -1,2 +1,2 @@
 # Alchemist Repos
-Formatted repositories for usage with the `Alchemist` Ultrahand package.
+Formatted repositories for usage with the [Alchemist](https://github.com/ppkantorski/Alchemist) Ultrahand package.
