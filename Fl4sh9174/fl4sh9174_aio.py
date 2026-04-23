@@ -197,8 +197,8 @@ def main():
         sys.exit(1)
 
     zip_url = "https://github.com/Fl4sh9174/Switch-Ultrawide-Mods/archive/refs/heads/main.zip"
-    zip_path = "Switch-Ultrawide-Mods-main.zip"
-    unzip_dir = "Switch-Ultrawide-Mods-main"
+    zip_path = "Switch-Emulator-Ultrawide-FPS-Mods-main.zip"
+    unzip_dir = "Switch-Emulator-Ultrawide-FPS-Mods-main"
 
     if not os.path.exists(unzip_dir):
         if not os.path.exists(zip_path):
