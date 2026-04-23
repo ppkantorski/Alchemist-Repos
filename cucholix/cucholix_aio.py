@@ -159,7 +159,7 @@ def extract_archive_headless(archive_path, outdir):
 # ---------------- Processing per archive ----------------
 def process_rar(root_folder, rar_relpath, output_root):
     subdir, filename = os.path.split(rar_relpath)
-    version_match = re.match(r"release_(.+?)(?:\.part\d+)?\.(rar|7z)$", filename, re.IGNORECASE)
+    version_match = re.match(r"release_(.+?)(?:\.part\d+)?\.(rar|7z|zip)$", filename, re.IGNORECASE)
     if not version_match:
         print(f"❌ Invalid release name: {filename}")
         return
@@ -287,8 +287,8 @@ def main():
     tasks = []
     for dirpath, _, files in os.walk(root):
         for fn in files:
-            if re.match(r"release_(.+?)(?:\.part\d+)?\.(rar|7z)$", fn, re.IGNORECASE):
-                if fn.lower().endswith(".part01.rar") or (fn.lower().endswith(".rar") and ".part" not in fn.lower()) or fn.lower().endswith(".7z"):
+            if re.match(r"release_(.+?)(?:\.part\d+)?\.(rar|7zr|zip)$", fn, re.IGNORECASE):
+                if fn.lower().endswith(".part01.rar") or (fn.lower().endswith(".rar") and ".part" not in fn.lower()) or fn.lower().endswith(".7z") or fn.lower().endswith(".zip"):
                     rel = os.path.relpath(os.path.join(dirpath, fn), root)
                     tasks.append(rel)
 
